@@ -1,6 +1,6 @@
 ## Awesome Page File 
 
----
+----
 
 **bold**
 
@@ -13,5 +13,6 @@
 [GPS Screenshot](https://github.com/elliedori/phase-0-gps-1/blob/master/GPSScreenshot.png)
 
 ---
-Introduction of Conflict! 
+
+
 
