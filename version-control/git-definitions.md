@@ -4,7 +4,7 @@
 
 * What is version control?  Why is it useful?
 
-  Version control enables you to take snapshots of your work as you make changes on a project. It's useful because you can revert your work back to an earlier version if your latest updates create bugs or errors. It also serves as a back up of your work.
+  Version control allows you to take snapshots of your work as you make changes on a project. It's useful because you can revert your work back to an earlier version if your latest updates create bugs or errors. It also serves as a back up of your work.
 
 * What is a branch and why would you use one?
   
