@@ -1,0 +1,15 @@
+#body{
+  margin-right: 100px;
+  margin-left: 100px;
+  margin-top: 150px;
+  z-index: 0;
+}
+
+#eyewear {
+  position: absolute;
+  z-index: 1;
+}
+
+#hat {
+  z-index: 1;
+}
