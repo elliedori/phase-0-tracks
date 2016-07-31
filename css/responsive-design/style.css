@@ -1,3 +1,33 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Gist
+ @elliedori
+ Watch 1
+  Star 0
+  Fork 558 rjarena/phase-0-tracks
+forked from Devbootcamp/phase-0-tracks
+ Code  Pull requests 0  Pulse  Graphs
+Branch: master Find file Copy pathphase-0-tracks/css/responsive-design/style.css
+5bc6fa9  7 minutes ago
+@rjarena rjarena Add float capability to external links to display centered after scre…
+1 contributor
+RawBlameHistory     79 lines (61 sloc)  986 Bytes
+body {
+  max-width: 960px;
+  min-width: 360px;
+  padding: 0 0 0 20px;
+}
+
+main {
+  width: 78%;
+  display:inline-block;
+  vertical-align: left;
+
+}
+
 blockquote {
   border-left: 5px solid blue;
   padding: 15px;
@@ -9,6 +39,14 @@ cite {
   margin-top: 10px;
 }
 
+#external-links {
+  width: 20%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+
 #external-links ul {
   list-style-type: none;
   padding-left: 0px;
@@ -18,7 +56,7 @@ cite {
 image, figure, and figcaption CSS if you'd like, 
 but it's optional! */
 img {
-  width: 100%;
+  width: 80%;
 }
 
 figure {
@@ -30,3 +68,30 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+
+@media only screen and (max-width: 500px) {
+
+  body { 
+    font-size: 75%; 
+  }
+  main {
+    width: 100%;
+    }
+  #external-links {
+    width: 100%;
+    float: right;
+    position: relative;
+    text-align: center;
+
+  }
+
+
+}
+
+/* @media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+} */
+Contact GitHub API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Status Help
