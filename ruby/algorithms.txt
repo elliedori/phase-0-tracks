@@ -1,0 +1,28 @@
+#Elevator Robot
+
+– Press elevator call button
+– When elevator door opens, enter elevator
+– Ask owner what floor they want to go to (if no number given, use 3 as default)
+– Press desired floor number button
+– Until the current floor is the same as the desired floor
+    – Check floor number (on inside of elevator doorway)
+        – If current floor number is the same as the desired floor number
+            – Exit elevator
+        – If not
+            – Stay on elevator
+
+#Congrats little bot, you used an elevator!
+
+#-----------------------------------------------------------------------------------
+
+# Making Tea Algorithm
+
+– Put water in kettle
+– Put kettle on stove
+– Turn on stove
+– Take teabag from cupboard
+– Put teabag in cup
+– If kettle whistles
+    – Turn off stove & pour water into mug
+– Wait 3 minutes
+– Drink tea

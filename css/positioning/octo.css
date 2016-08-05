@@ -1,0 +1,17 @@
+#body{
+  margin-right: 100px;
+  margin-left: 100px;
+  margin-top: 150px;
+}
+
+#eyewear {
+  position: relative;
+  left: 560px;
+  top: -131px;
+}
+
+#hat {
+  position: relative;
+  left: 360px;
+  top: -180px;
+}
