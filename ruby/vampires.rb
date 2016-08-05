@@ -70,6 +70,7 @@ def employee_survey
   end
 
   puts result
+  puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
 end
 
 # prompt user to select number of employees & loop through program
