@@ -42,7 +42,7 @@ def decrypt(word)
   p word
 end
 
-decrypt(encrypt("swordfish"))
+# decrypt(encrypt("swordfish"))
 
 # This works because we used p (which return the word). If we were to use print or puts,
 # the method would return nil and we would get an error.
@@ -50,6 +50,24 @@ decrypt(encrypt("swordfish"))
 # entire expression. This was "swordfish" gets encrypted first, and then that encrypted text
 # gets decrypted.
 
+# Ask the user if they want to encrypt/decrypt
+# Store their option
+# Ask them for the password
+# Store the password
+# Run the preferred option with the password
+
+
+puts "Would you like to encrypt or decrypt a password?"
+option = gets.chomp.downcase
+
+puts "What's the password?"
+password = gets.chomp
+
+if option == "encrypt"
+  encrypt(password)
+else 
+  decrypt(password)
+end
 
 
 
