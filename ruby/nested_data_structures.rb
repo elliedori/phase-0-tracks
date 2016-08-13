@@ -1,0 +1,35 @@
+freeway = {
+
+  red_nissan: {
+    people: ['Susan', 'John'],
+    no_of_cupholders: 4
+    destination: 'Marin Headlands'
+  }
+
+  blue_bmw: {
+    people: ['Eric']
+    no_of_cupholders: 2
+    destination: 'The Mission'
+  }
+
+  white_honda: {
+    people: ['Roxanne', 'Josh', 'Freddy']
+    no_of_cupholders: 4
+    destination: 'Russian River'
+  }
+
+  clown_car: {
+    people: ['Belinda the Bearded Lady', 'Tickler the Clown', 'Menace the Mime'], 
+    no_of_cupholders: 8
+    destination: "Willy Wonka's Chocolate Factory"
+  }
+
+  black_mini: {
+    people: ['Paulo', 'Cassandra'],
+    no_of_cupholders: 2
+    destination: 'Napa Valley'
+  }
+
+
+
+}
