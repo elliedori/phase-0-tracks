@@ -42,8 +42,7 @@ freeway[:white_honda][:people] << 'Elaine'
 puts freeway[:white_honda][:people]
 
 freeway[:black_mini][:no_of_cupholders] = 4
-puts freeway[:black_mini][:no_of_cupholders
+puts freeway[:black_mini][:no_of_cupholders]
 
 
 
-  
