@@ -4,18 +4,24 @@
 # We spent [#] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
-#
+# Require relative is used for files (usually within the same directory). 
+# Require is used for either files or modules.
+# In both cases, you are pulling the code from the file or module into your current file.
+
 require_relative 'state_data'
 
 class VirusPredictor
 
+  # intialize is used to create new instances of a class, in this case it takes in three parameters
+  # that are then assigned to instance variables (attributes)
   def initialize(state_of_origin, population_density, population)
     @state = state_of_origin
     @population = population
     @population_density = population_density
   end
 
+
+  # this method is calling two other methods inside it, and returns the speed_of_spread output
   def virus_effects
     predicted_deaths(@population_density, @population, @state)
     speed_of_spread(@population_density, @state)
@@ -23,6 +29,9 @@ class VirusPredictor
 
   private
 
+  # this method calculate the number of likely deaths based on population density,
+  # returns an integer less or equal to the float number
+  # also prints a message to the user with the information
   def predicted_deaths(population_density, population, state)
     # predicted deaths is solely based on population density
     if @population_density >= 200
@@ -41,6 +50,8 @@ class VirusPredictor
 
   end
 
+  # this methods calculates how fast the virus will spread (in months) based 
+  # on population density, also prints message to user with information
   def speed_of_spread(population_density, state) #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
