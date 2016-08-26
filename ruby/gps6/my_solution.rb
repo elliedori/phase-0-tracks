@@ -2,8 +2,8 @@
 
 require 'pry'
 
-# I worked on this challenge [by myself, with: ].
-# We spent [#] hours on this challenge.
+# I worked on this challenge with: Bradley Inniss.
+# We spent ~ 1 hour on this challenge.
 
 # EXPLANATION OF require_relative
 # Require relative is used for files (usually within the same directory). 
@@ -102,3 +102,34 @@ end
 
 #=======================================================================
 # Reflection Section
+
+
+# What are the differences between the two different hash syntaxes shown in the state_data file?
+# The larger hash has strings as keys, and uses the hash rocket syntax. The nested hash uses
+# symbols as keys, and thus uses the shorthand colon syntax.
+
+# What does require_relative do? How is it different from require?
+# Relative require inserts the code from a file into the current file. The file it pulls from is usually
+# in the same directory. Relative inserts the code from a file or a module into the current file.
+
+# What are some ways to iterate through a hash?
+# You can iterate through a hash using methods like .each, .map, .select.
+
+# When refactoring virus_effects, what stood out to you about the variables, if anything?
+# I noticed that the variables were instance variables, which are already available/accessible to the method.
+
+# What concept did you most solidify in this challenge?
+# I feel like I solidified refactoring. It was cool to look at code that seemed to my eyes already clean
+# and learn how to dig deeper and make it even more DRY.
+
+
+
+
+
+
+
+
+
+
+
+
