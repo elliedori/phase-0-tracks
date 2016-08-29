@@ -117,8 +117,8 @@ arrayBuilder(7)
 
 // driver code that does the following 10 times: generates random array & prints longest string
 for (var k = 0; k < 10; k++) {
-  // length = Math.floor(Math.random() * 4) + 2; // generate random array length between 2 and 6
-  testArray = arrayBuilder(5);
+  length = Math.floor(Math.random() * 6) + 2; // generate random array length between 2 and 7
+  testArray = arrayBuilder(length);
   longestFinder(testArray);
 }
 
