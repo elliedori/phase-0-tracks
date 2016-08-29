@@ -7,7 +7,7 @@
 
 function longestFinder(array) {
   longest = ""
-  for (i = 0; i < array.length; i++) {
+  for (var i = 0; i < array.length; i++) {
     if (array[i].length > longest.length) {
       longest = array[i]
       
