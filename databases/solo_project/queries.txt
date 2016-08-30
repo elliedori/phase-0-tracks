@@ -25,4 +25,26 @@
 5. DELETE FROM students WHERE graduated = "false";
         (no output)
 
-6. 
+————————————————————————————————————————————————————————————————————
+
+SELECT students.name, students.age, students.graduated, schools.name FROM students, schools WHERE students.age > 30 AND students.school_id = schools.id;
+        Mickey Mouse|60|true|NYU
+        The Cat in the Hat|42|true|Harvard
+        Superwoman|33|true|UC Berkeley
+
+SELECT students.name, schools.name FROM students INNER JOIN schools WHERE students.school_id = schools.id;
+        Mickey Mouse|NYU
+        The Cat in the Hat|Harvard
+        Superwoman|UC Berkeley
+        Betty Boop|UCLA
+        Yes Man|UC Berkeley
+
+SELECT students.name, students.age, schools.name FROM students LEFT JOIN schools WHERE students.school_id = schools.id;
+        Mickey Mouse|60|NYU
+        The Cat in the Hat|42|Harvard
+        Superwoman|33|UC Berkeley
+        Betty Boop|27|UCLA
+        Yes Man|25|UC Berkeley
+
+
+
