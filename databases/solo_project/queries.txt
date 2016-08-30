@@ -1,0 +1,28 @@
+1. SELECT * FROM students;
+        1|Mickey Mouse|60|true|4
+        2|The Cat in the Hat|42|false|3
+        3|Superwoman|33|true|1
+        4|Betty Boop|27|true|2
+        5|Dr. Evil|52|false|2
+
+2. UPDATE students SET graduated = "true" WHERE name = "The Cat in the Hat";
+        (no output)
+
+3. SELECT * FROM students, schools WHERE students.school_id = schools.id;
+        1|Mickey Mouse|60|true|4|4|NYU|New York City, NY
+        2|The Cat in the Hat|42|true|3|3|Harvard|Boston, MA
+        3|Superwoman|33|true|1|1|UC Berkeley|Berkeley, CA
+        4|Betty Boop|27|true|2|2|UCLA|Los Angeles, CA
+        5|Dr. Evil|52|false|2|2|UCLA|Los Angeles, CA
+
+4. SELECT students.name, students.graduated, schools.name FROM students JOIN schools ON students.school_id = schools.id;
+        Mickey Mouse|true|NYU
+        The Cat in the Hat|true|Harvard
+        Superwoman|true|UC Berkeley
+        Betty Boop|true|UCLA
+        Dr. Evil|false|UCLA
+
+5. DELETE FROM students WHERE graduated = "false";
+        (no output)
+
+6. 
