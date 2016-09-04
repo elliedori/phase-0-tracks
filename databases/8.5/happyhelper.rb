@@ -20,21 +20,17 @@ def log_med(db, type, mood)
   db.execute("INSERT INTO meditations (day, type, mood) VALUES (?, ?, ?)", [today, type, mood])
 end
 
+meditation_log = db.execute ("SELECT * FROM meditations")
 
-# DRIVER CODE TO TEST
-
+# DRIVER CODE TO TEST ————————————————————————————
 # log_med(db, "listening", 7)
-
 # meditation_types = ["listening to sounds", "feeling body sensations", "focusing on the breath", "visualizing an image"]
-
 # 200.times do
 #   log_med(db, meditation_types.sample, rand(10) + 1)
 # end
-
-meditation_log = db.execute ("SELECT * FROM meditations")
 # puts meditation_log
 
-# USER INTERFACE
+# USER INTERFACE ————————————————————————————
 puts "\n"
 puts "Hi there! Welcome to Happy Helper™, the app that helps you quiet your mind and live life more fully."
 puts "\n"
@@ -53,7 +49,7 @@ while true
   puts "Would you like to log a new meditation? (y/n)"
   input = gets.chomp
   if input == "n"
-    puts "Okay, bye!"
+    puts "Okay!"
     break
   else
     puts "What kind of meditation did you practice today?
@@ -66,11 +62,16 @@ while true
           Enter a number to continue:"
 
     type_as_num = gets.chomp
-        type = "Listening to sounds" if type_as_num == 1
-        type = "Feeling body sensations" if type_as_num == 2
-        type = "Focusing on the breath" if type_as_num == 3
-        type = "Visualizing an image" if type_as_num == 4
-# it's not logging type correctly, debug this later
+        if type_as_num == 1
+          type = "Listening to sounds" 
+        elsif type_as_num == 2
+          type = "Feeling body sensations"
+        elsif type_as_num == 3
+          type = "Focusing on the breath"
+        else
+          type = "Visualizing an image"
+        end
+
     puts "On a scale of 1 to 10 (10 being the best feeling ever), how did you feel today?"
       mood = gets.chomp
     log_med(db, type, mood)
@@ -80,11 +81,17 @@ while true
   break
 end
 
+meditation_log.each do |entry|
+  puts "#{entry[0]}. #{entry[1]} | Type of meditation: #{entry[2]} | Mood: #{entry[3]}"
+  end
+
 puts "Would you like to see your meditation log? (y/n)"
 input = gets.chomp
 
 if input == "n"
   puts "Okay, have fun!"
 else 
-  meditation_log
+  meditation_log.each do |entry|
+  puts "#{entry[0]}. #{entry[1]} | Type of meditation: #{entry[2]} | Mood: #{entry[3]}"
+  end
 end
