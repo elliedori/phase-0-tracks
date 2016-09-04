@@ -20,8 +20,6 @@ def log_med(db, type, mood)
   db.execute("INSERT INTO meditations (day, type, mood) VALUES (?, ?, ?)", [today, type, mood])
 end
 
-meditation_log = db.execute ("SELECT * FROM meditations")
-
 # DRIVER CODE TO TEST ————————————————————————————
 # log_med(db, "listening", 7)
 # meditation_types = ["listening to sounds", "feeling body sensations", "focusing on the breath", "visualizing an image"]
@@ -29,6 +27,7 @@ meditation_log = db.execute ("SELECT * FROM meditations")
 #   log_med(db, meditation_types.sample, rand(10) + 1)
 # end
 # puts meditation_log
+
 
 # USER INTERFACE ————————————————————————————
 puts "\n"
@@ -61,7 +60,7 @@ while true
 
           Enter a number to continue:"
 
-    type_as_num = gets.chomp
+    type_as_num = gets.chomp.to_i
         if type_as_num == 1
           type = "Listening to sounds" 
         elsif type_as_num == 2
@@ -81,12 +80,11 @@ while true
   break
 end
 
-meditation_log.each do |entry|
-  puts "#{entry[0]}. #{entry[1]} | Type of meditation: #{entry[2]} | Mood: #{entry[3]}"
-  end
 
 puts "Would you like to see your meditation log? (y/n)"
 input = gets.chomp
+
+meditation_log = db.execute ("SELECT * FROM meditations")
 
 if input == "n"
   puts "Okay, have fun!"
