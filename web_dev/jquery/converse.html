@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Converse Luv</title>
+  <link rel="stylesheet" type="text/css" href="converse.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+  <h1>Converse High Tops</h1>
+  <h2>The Coolest Kicks Ever</h2>
+    <img src="http://www.wearyoursport.com/wp-content/uploads/2015/07/black-converse-high-tops-2.jpg" alt="A pair of black Converse high tops"/>
+    <p>Converse are a popular and well-loved brand of sneakers. Originally developed for basketball players, they quickly gained an enthusiastic devotion from teens, adults, and celebrities. Also known as "Chuck Taylors" or "Chucks", they are comfortable and cool, providing little arch support but plenty of ankle support.</p>
+    <img id="girl" src="http://i1196.photobucket.com/albums/aa419/lefashion/LE%20FASHION/Le-Fashion-Blog-Model-Off-Duty-Style-Simple-Tee-Skinny-Black-Jeans-Converse-High-Top-Sneakers-via-Free-People.jpg" alt="Young blonde woman wearing black high tops, black jeans, and blue shirt."/>
+
+    <p>Check out some great outfits for your Converse high tops <a id="lefashion" href="http://www.lefashion.com/2016/01/21-ways-to-wear-black-converse-sneakers.html">here</a>.
+
+  <script>
+    // ensure the doc as jquery object is ready
+    $(function(){
+      console.log("Ready!");
+    });
+
+    // check jquery responsiveness through console
+    $('p').click (function() {
+      console.log("You clicked a paragraph!");
+    });
+
+    // modify html code
+    $('p').addClass('words');
+
+    // select an element by id, learn more about it
+    var blogLink = $('a#lefashion');
+    console.log(blogLink.html());
+    console.log(blogLink.attr('href'));
+    console.log(blogLink.css('color'));
+
+    // modify styling of element
+    $('p').css({'color': 'green'});
+
+    // create element via jquery
+    var secret = $('<p>PSSST! If you\'re wearing high tops right now, give yourself a high five!</p>');
+    
+    // inject the element into the html if the user clicks on the photo of the girl
+    $('#girl').click (function() {
+      $('body').append(secret);
+    });
+
+  </script>
+</body>
+
+</html>
