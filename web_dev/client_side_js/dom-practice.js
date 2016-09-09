@@ -16,3 +16,14 @@ subtitle.style.fontSize = "3em";
 
 var body = document.getElementById("body");
 body.style.backgroundColor = "orange";
+
+function colorChanger(event) {
+  console.log("We clicked this!")
+  console.log(event);
+  event.target.style.border = "10px solid blue";
+}
+
+launchPhoto.addEventListener("click", colorChanger);
+
+
+
