@@ -17,3 +17,6 @@
 
 I chose this approach because it's separated into two distinct blocks, where I can really focus in and have uninterrupted work time. I learn best by looking at code examples, reading, and watching videos, so those are the resources I'll look for during the learning phase. Then, I have a longish break so I can give my brain a break and allow the information to absorb a little bit. After the break, I'll put what I've learned into practice.
 
+## Results
+
+This worked out pretty well for me. I ended up needing to reference my learning resources when I was writing the code, which makes me think that it would have been more helpful to practice writing code as I was in the learning stage. 
