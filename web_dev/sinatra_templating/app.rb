@@ -35,15 +35,19 @@ get '/campus' do
   erb :campus
 end
 
+# add a new campus to DBC
 get '/campus/list' do
   @campuses = db.execute("SELECT * FROM campuses")
-  p @campuses
   erb :campus_list
 end
 
-post '/campus/list' do
-  db.execute("INSERT INTO campuses (name) VALUES ?", [params['name']])
-  redirect '/campus/list'
+post '/campus/list/new' do
+  new_campus = params['name']
+  db.execute("INSERT INTO campuses (name) VALUES (?)", new_campus)
+  redirect '/success'
 end
 
+get '/success' do
+  "You've successfully added a new campus to the Dev Bootcamp system!"
+end
 # add static resources
