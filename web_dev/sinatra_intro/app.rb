@@ -44,3 +44,9 @@ get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
 end
+
+# write a GET route that displays address
+
+get '/address' do
+  "633 Folsom St, San Francisco, CA 94107"
+end
