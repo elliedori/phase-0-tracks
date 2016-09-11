@@ -35,5 +35,15 @@ get '/campus' do
   erb :campus
 end
 
+get '/campus/list' do
+  @campuses = db.execute("SELECT * FROM campuses")
+  p @campuses
+  erb :campus_list
+end
+
+post '/campus/list' do
+  db.execute("INSERT INTO campuses (name) VALUES ?", [params['name']])
+  redirect '/campus/list'
+end
 
 # add static resources
